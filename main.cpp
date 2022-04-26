@@ -3,6 +3,7 @@
 //#include "Student.h"
 #include "Common.h"
 #include "Header.h"
+#include "Master.h"
 int main()
 {
     StudentManager sm;
@@ -12,6 +13,9 @@ int main()
     Header *he = NULL;
     he = new Header(1,"yy",2);
     he->ShowInfo();
+    Master * master;
+    master = new Master(1,"aa",2);
+    master->ShowInfo();
     /*
     int choice;
 
