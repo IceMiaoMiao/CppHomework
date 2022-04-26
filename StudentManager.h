@@ -6,6 +6,8 @@
 #include "Common.h"
 #include "Header.h"
 #include "Master.h"
+#include "fstream"
+#define FILENAME "stuFile.txt"
 using namespace std;
 #ifndef CPPHOMEWORK_STUDENTMANAGER_H
 #define CPPHOMEWORK_STUDENTMANAGER_H
@@ -20,6 +22,7 @@ public:
     int sumNum;
     Student** stuArray;
     void AddStu();
+    void Save();
 };
 
 

@@ -76,17 +76,34 @@ void StudentManager::AddStu()
         delete[] this->stuArray;
         this->stuArray = newSpace;
         sumNum = newSize;
+        this->Save();
         cout<<"成功添加"<<addNum<<"名新同学"<<endl;
 
     }
     else
     {
-
+        cout<<"你是不是输入有误啊啊"<<endl;
     }
+    system("pause");
+    system("cls");
 }
 void StudentManager::ExitSystem()
 {
     cout<<"俺要退出程序啦"<<endl;
     system("pause");
     exit(0);
+}
+void StudentManager::Save()
+{
+    //写入文件
+    ofstream ofs;
+    ofs.open(FILENAME,ios::out);
+    for (int i = 0; i < this->sumNum; ++i) {
+        ofs<<this->stuArray[i]->id<<" "
+        <<this->stuArray[i]->name<<" "
+        <<this->stuArray[i]->depId<<endl;
+    }
+    //关闭文件
+    ofs.close();
+
 }
