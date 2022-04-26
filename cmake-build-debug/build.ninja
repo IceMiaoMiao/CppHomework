@@ -84,6 +84,12 @@ build CMakeFiles/CppHomework.dir/Common.cpp.obj: CXX_COMPILER__CppHomework_Debug
   OBJECT_DIR = CMakeFiles\CppHomework.dir
   OBJECT_FILE_DIR = CMakeFiles\CppHomework.dir
 
+build CMakeFiles/CppHomework.dir/Header.cpp.obj: CXX_COMPILER__CppHomework_Debug D$:/dadadagitban/CppHomework/Header.cpp || cmake_object_order_depends_target_CppHomework
+  DEP_FILE = CMakeFiles\CppHomework.dir\Header.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\CppHomework.dir
+  OBJECT_FILE_DIR = CMakeFiles\CppHomework.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target CppHomework
@@ -92,7 +98,7 @@ build CMakeFiles/CppHomework.dir/Common.cpp.obj: CXX_COMPILER__CppHomework_Debug
 #############################################
 # Link the executable CppHomework.exe
 
-build CppHomework.exe: CXX_EXECUTABLE_LINKER__CppHomework_Debug CMakeFiles/CppHomework.dir/main.cpp.obj CMakeFiles/CppHomework.dir/StudentManager.cpp.obj CMakeFiles/CppHomework.dir/Student.cpp.obj CMakeFiles/CppHomework.dir/Common.cpp.obj
+build CppHomework.exe: CXX_EXECUTABLE_LINKER__CppHomework_Debug CMakeFiles/CppHomework.dir/main.cpp.obj CMakeFiles/CppHomework.dir/StudentManager.cpp.obj CMakeFiles/CppHomework.dir/Student.cpp.obj CMakeFiles/CppHomework.dir/Common.cpp.obj CMakeFiles/CppHomework.dir/Header.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\CppHomework.dir

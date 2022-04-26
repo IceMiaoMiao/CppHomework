@@ -2,12 +2,16 @@
 #include "StudentManager.h"
 //#include "Student.h"
 #include "Common.h"
+#include "Header.h"
 int main()
 {
     StudentManager sm;
     Common *cm = NULL;
     cm = new Common(1,"yy",2);
     cm->ShowInfo();
+    Header *he = NULL;
+    he = new Header(1,"yy",2);
+    he->ShowInfo();
     /*
     int choice;
 

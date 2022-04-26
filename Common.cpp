@@ -13,7 +13,7 @@ void Common::ShowInfo()
 {
     cout<<"俺的学号是："<<id
     <<"\t名字是："<<name
-    <<"\t职务是："<<GetDepName()
+    <<"\t职务是："<<GetDepName()<<depId
     <<"\t俺的任务是好好学习 "<<endl;
 }
 string Common::GetDepName()
