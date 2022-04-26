@@ -1,9 +1,14 @@
 #include <iostream>
 #include "StudentManager.h"
+//#include "Student.h"
+#include "Common.h"
 int main()
 {
     StudentManager sm;
-
+    Common *cm = NULL;
+    cm = new Common(1,"yy",2);
+    cm->ShowInfo();
+    /*
     int choice;
 
     while(1)
@@ -36,7 +41,7 @@ int main()
         }
         break;
     }
-
+    */
 
     return 0;
 }
