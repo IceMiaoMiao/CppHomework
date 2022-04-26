@@ -32,6 +32,10 @@ StudentManager::StudentManager()
     int num = this->GetNum();
     cout<<"当前有："<<num<<"个学生"<<endl;
     this->sumNum = num;
+    //开辟空间
+    this->stuArray = new Student*[this->sumNum];
+    //初始化数据，添加到数组中
+    this->initStu();
 
 }
 StudentManager::~StudentManager()
@@ -147,4 +151,34 @@ int StudentManager::GetNum()
 
     }
     return num;
+}
+void StudentManager::initStu()
+{
+    ifstream ifs;
+    ifs.open(FILENAME,ios::in);
+    int id;
+    string name;
+    int did;
+    int index = 0;
+    while(ifs>>id && ifs>>name && ifs >>did)
+    {
+        Student * student = NULL;
+        if (did == 1)
+        {
+            student = new Common(id,name,did);
+
+        }
+        else if (did==2)
+        {
+            student = new Header(id,name,did);
+        }
+        else
+        {
+            student = new Master(id,name,did);
+        }
+        this->stuArray[index] = student;
+        index++;
+
+    }
+    ifs.close();
 }

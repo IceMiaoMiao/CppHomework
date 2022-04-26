@@ -25,6 +25,8 @@ public:
     void Save();
     bool fileIsEmpty;
     int GetNum();
+    void initStu();
+
 };
 
 
