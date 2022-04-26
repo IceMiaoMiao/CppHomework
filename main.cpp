@@ -7,6 +7,7 @@
 int main()
 {
     StudentManager sm;
+    /*
     Common *cm = NULL;
     cm = new Common(1,"yy",2);
     cm->ShowInfo();
@@ -16,7 +17,8 @@ int main()
     Master * master;
     master = new Master(1,"aa",2);
     master->ShowInfo();
-    /*
+    */
+
     int choice;
 
     while(1)
@@ -30,6 +32,7 @@ int main()
                 sm.ExitSystem();
                 break;
             case 1:
+                sm.AddStu();
                 break;
             case 2:
                 break;
@@ -49,7 +52,7 @@ int main()
         }
         break;
     }
-    */
+
 
     return 0;
 }
