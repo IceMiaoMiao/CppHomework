@@ -5,9 +5,34 @@
 #include "StudentManager.h"
 StudentManager::StudentManager()
 {
+
     cout<<"这是构造函数"<<endl;
-    this->sumNum = 0;
-    this->stuArray = NULL;
+    ifstream ifs;
+    ifs.open(FILENAME,ios::in);
+    if (!ifs.is_open())
+    {
+        cout<<"当前不存在文件！"<<endl;
+        this->sumNum = 0;
+        this->stuArray = NULL;
+        this->fileIsEmpty = true;
+        ifs.close();
+        return;
+    }
+    char ch;
+    ifs>>ch;
+    if (ifs.eof())
+    {
+        cout<<"文件空空的，比钱包还干净"<<endl;
+        this->sumNum = 0;
+        this->stuArray = NULL;
+        this->fileIsEmpty = true;
+        ifs.close();
+        return;
+    }
+    int num = this->GetNum();
+    cout<<"当前有："<<num<<"个学生"<<endl;
+    this->sumNum = num;
+
 }
 StudentManager::~StudentManager()
 {
@@ -77,6 +102,7 @@ void StudentManager::AddStu()
         this->stuArray = newSpace;
         sumNum = newSize;
         this->Save();
+        fileIsEmpty = false;
         cout<<"成功添加"<<addNum<<"名新同学"<<endl;
 
     }
@@ -105,5 +131,20 @@ void StudentManager::Save()
     }
     //关闭文件
     ofs.close();
+}
+int StudentManager::GetNum()
+{
+    ifstream ifs;
+    ifs.open(FILENAME,ios::in);
+    int id;
+    string name;
+    int did;
+    int num = 0;
 
+    while(ifs>>id && ifs>>name && ifs >>did)
+    {
+        num++;
+
+    }
+    return num;
 }

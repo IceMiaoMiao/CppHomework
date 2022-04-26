@@ -23,6 +23,8 @@ public:
     Student** stuArray;
     void AddStu();
     void Save();
+    bool fileIsEmpty;
+    int GetNum();
 };
 
 
