@@ -11,6 +11,7 @@ class StudentManager {
 public:
     StudentManager();
     ~StudentManager();
+    void ShowMenu();
 };
 
 

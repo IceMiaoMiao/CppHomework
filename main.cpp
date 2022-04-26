@@ -3,6 +3,6 @@
 int main()
 {
     StudentManager sm;
-
+    sm.ShowMenu();
     return 0;
 }
