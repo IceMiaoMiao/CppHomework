@@ -27,3 +27,10 @@ void StudentManager::ShowMenu()
     cout<<"-------点我(7)清空记录--------"<<endl;
     cout<<"俺是一个结束线"<<endl;
 }
+
+void StudentManager::ExitSystem()
+{
+    cout<<"俺要退出程序啦"<<endl;
+    system("pause");
+    exit(0);
+}

@@ -12,6 +12,7 @@ public:
     StudentManager();
     ~StudentManager();
     void ShowMenu();
+    void ExitSystem();
 };
 
 
