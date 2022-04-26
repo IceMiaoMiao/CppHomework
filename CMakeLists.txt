@@ -3,4 +3,4 @@ project(CppHomework)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(CppHomework main.cpp)
+add_executable(CppHomework main.cpp StudentManager.cpp StudentManager.h)

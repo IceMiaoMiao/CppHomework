@@ -1,3 +1,6 @@
 # ninja log v5
 0	207	6726806669871985	CMakeFiles/CppHomework.dir/main.cpp.obj	2679c4817ee308f1
 208	274	6726806670497419	CppHomework.exe	5d9277655f2e1958
+1	227	6726809236692145	CMakeFiles/CppHomework.dir/StudentManager.cpp.obj	a58d4bb45c9a0654
+7	228	6726809236692145	CMakeFiles/CppHomework.dir/main.cpp.obj	2679c4817ee308f1
+228	292	6726809237316470	CppHomework.exe	2fc60942c89d3ce5

@@ -1,6 +1,8 @@
 #include <iostream>
+#include "StudentManager.h"
+int main()
+{
+    StudentManager sm;
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
     return 0;
 }
