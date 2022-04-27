@@ -47,8 +47,10 @@ int main()
                 sm.FindStu();
                 break;
             case 6:
+                sm.SortStu();
                 break;
             case 7:
+                sm.CleanFile();
                 break;
             default:
                 system("cls");

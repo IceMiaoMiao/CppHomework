@@ -31,6 +31,9 @@ public:
     int IsExit(int _id);
     void ModStu();
     void FindStu();
+    void SortStu();
+    void CleanFile();
+
 };
 
 

@@ -354,3 +354,83 @@ void StudentManager::FindStu()
     system("pause");
     system("cls");
 }
+void StudentManager::SortStu()
+{
+    if (this->fileIsEmpty)
+    {
+        cout<<"俺这里什么都没有啦"<<endl;
+        system("pause");
+        system("cls");
+
+    }
+    else
+    {
+        cout<<"怎么排序呢?\n按1升序\n按2降序"<<endl;
+        int select = 0;
+        cin>>select;
+        for (int i = 0; i < sumNum; ++i) {
+            int minOrMax = i;
+            for (int j = i+1; j < sumNum - i; ++j)
+            {
+                if (select == 1)
+                {
+                    if (this->stuArray[minOrMax]->id > this->stuArray[j]->id)
+                    {
+                        minOrMax = j;
+                    }
+
+                }
+                else
+                {
+                    if (this->stuArray[minOrMax]->id < this->stuArray[j]->id)
+                    {
+                        minOrMax = j;
+                    }
+                }
+            }
+            if (i != minOrMax)
+            {
+                Student * student = this->stuArray[i];
+                stuArray[i]= stuArray[minOrMax];
+                stuArray[minOrMax] = student;
+
+            }
+
+
+        }
+        cout<<"俺排序完成啦"<<endl;
+        this->Save();
+        this->ShowStu();
+
+    }
+}
+void StudentManager::CleanFile()
+{
+    cout<<"真的要全部清空嘛?\n点1确定\n点2取消"<<endl;
+    int select = 0;
+    cin>>select;
+    if (select==1)
+    {
+        ofstream ofs(FILENAME,ios::trunc);
+        //删除文件后重建
+        ofs.close();
+        if (this->stuArray != NULL)
+        {
+
+            for (int i = 0; i < this->sumNum; ++i) {
+                delete this->stuArray[i];
+                this->stuArray[i] = NULL;
+
+            }
+            delete[] stuArray;
+            stuArray = NULL;
+            this->sumNum = 0;
+            this->fileIsEmpty = true;
+
+        }
+        cout<<"成功全部删除啦"<<endl;
+    }
+    system("pause");
+    system("cls");
+
+}
