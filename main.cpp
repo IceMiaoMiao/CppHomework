@@ -35,6 +35,7 @@ int main()
                 sm.AddStu();
                 break;
             case 2:
+                sm.ShowStu();
                 break;
             case 3:
                 break;

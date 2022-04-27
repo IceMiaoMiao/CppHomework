@@ -182,3 +182,18 @@ void StudentManager::initStu()
     }
     ifs.close();
 }
+void StudentManager::ShowStu()
+{
+    if (this->fileIsEmpty)
+    {
+        cout<<"我怎么是空的?"<<endl;
+    }
+    else
+    {
+        for (int i = 0; i < sumNum; ++i) {
+            this->stuArray[i]->ShowInfo();
+        }
+    }
+    system("pause");
+    system("cls");
+}

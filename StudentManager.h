@@ -26,7 +26,7 @@ public:
     bool fileIsEmpty;
     int GetNum();
     void initStu();
-
+    void ShowStu();
 };
 
 
