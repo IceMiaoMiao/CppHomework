@@ -199,6 +199,33 @@ void StudentManager::ShowStu()
 }
 void StudentManager::DelStu()
 {
+    if (this->fileIsEmpty)
+    {
+        cout<<"别看啦，我什么都没有"<<endl;
+    }
+    else
+    {
+        cout<<"你想删除哪个呢？输入ID呗"<<endl;
+        int id = 0;
+        cin>>id;
+        int index = this->IsExit(id);
+        if (index != -1)
+        {
+            for (int i = index; i < this->sumNum-1; ++i) {
+                this->stuArray[i] = this->stuArray[i+1];
+
+            }
+            this->sumNum--;
+            this->Save();
+            cout<<"删除成功啦，找不到这位同学了已经"<<endl;
+        }
+        else
+        {
+            cout<<"没有这个学生啦"<<endl;
+        }
+    }
+    system("pause");
+    system("cls");
 
 }
 int StudentManager::IsExit(int _id)

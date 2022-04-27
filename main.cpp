@@ -38,6 +38,7 @@ int main()
                 sm.ShowStu();
                 break;
             case 3:
+                sm.DelStu();
                 break;
             case 4:
                 break;
