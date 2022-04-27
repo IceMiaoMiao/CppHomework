@@ -197,3 +197,19 @@ void StudentManager::ShowStu()
     system("pause");
     system("cls");
 }
+void StudentManager::DelStu()
+{
+
+}
+int StudentManager::IsExit(int _id)
+{
+    int index = -1;
+    for (int i = 0; i < this->sumNum; ++i) {
+        if (stuArray[i]->id==_id)
+        {
+            index = i;
+            break;
+        }
+    }
+    return index;
+}

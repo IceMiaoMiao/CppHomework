@@ -27,6 +27,8 @@ public:
     int GetNum();
     void initStu();
     void ShowStu();
+    void DelStu();
+    int IsExit(int _id);
 };
 
 
