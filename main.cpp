@@ -41,6 +41,7 @@ int main()
                 sm.DelStu();
                 break;
             case 4:
+                sm.ModStu();
                 break;
             case 5:
                 break;

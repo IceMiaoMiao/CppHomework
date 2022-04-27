@@ -29,6 +29,7 @@ public:
     void ShowStu();
     void DelStu();
     int IsExit(int _id);
+    void ModStu();
 };
 
 

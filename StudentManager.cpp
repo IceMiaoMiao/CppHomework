@@ -240,3 +240,55 @@ int StudentManager::IsExit(int _id)
     }
     return index;
 }
+void StudentManager::ModStu()
+{
+    if (this->fileIsEmpty)
+    {
+        cout<<"qaq俺什么都没有"<<endl;
+    }
+    else
+    {
+        cout<<"修改哪位同学呢，给我一个ID呗"<<endl;
+        int id;
+        cin>>id;
+        int ret = this->IsExit(id);
+        if (ret != -1)
+        {
+            delete this->stuArray[ret];
+            int newId = 0;
+            string newName;
+            int newdId;
+            cout<<"找到这个同学啦"<<endl<<"请输入新id"<<endl;
+            cin>>newId;
+            cout<<"给这位同学起个新名字呗"<<endl;
+            cin>>newName;
+            cout<<"新岗位呢"<<endl;
+            cin>>newdId;
+            Student * student = NULL;
+            switch (newdId) {
+                case 1:
+                    student = new Common(newId,newName,newdId);
+                    break;
+                case 2:
+                    student = new Header(newId,newName,newdId);
+                    break;
+                case 3:
+                    student = new Master(newId,newName,newdId);
+                    break;
+                default:
+                    break;
+            }
+            this->stuArray[ret] = student;
+            cout<<"修改成功啦"<<endl;
+             this->Save();
+        }
+        else
+        {
+            cout<<"qaq，俺没有改成功，是不是输入错了呢?"<<endl;
+
+        }
+    }
+    system("pause");
+    system("cls");
+
+}
