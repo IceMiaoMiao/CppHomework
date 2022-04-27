@@ -8,6 +8,7 @@ int main()
 {
     StudentManager sm;
     /*
+     * 这是调试的代码
     Common *cm = NULL;
     cm = new Common(1,"yy",2);
     cm->ShowInfo();

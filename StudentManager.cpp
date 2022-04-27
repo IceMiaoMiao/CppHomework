@@ -45,8 +45,8 @@ StudentManager::~StudentManager()
 
 void StudentManager::ShowMenu()
 {
-    cout<<"我是一个分割线"<<endl;
-    cout<<"------------------------"<<endl;
+    cout<<"----------我是一个分割线------------"<<endl;
+    cout<<"-----------------------------"<<endl;
     cout<<"-------欢迎使用学生管理系统-------"<<endl;
     cout<<"-------- 点我(0)退出程序------"<<endl;
     cout<<"-------点我(1)增加学生信息------"<<endl;
@@ -56,7 +56,7 @@ void StudentManager::ShowMenu()
     cout<<"-------点我(5)查找学生信息------"<<endl;
     cout<<"-------点我(6)给大家排序-------"<<endl;
     cout<<"-------点我(7)清空记录--------"<<endl;
-    cout<<"俺是一个结束线"<<endl;
+    cout<<"----------俺是一个结束线----------"<<endl;
 }
 void StudentManager::AddStu()
 {
