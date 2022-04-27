@@ -290,5 +290,67 @@ void StudentManager::ModStu()
     }
     system("pause");
     system("cls");
+}
+void StudentManager::FindStu()
+{
+    if (this->fileIsEmpty)
+    {
+        cout<<"呜呜，我什么都没有"<<endl;
 
+    }
+    else
+    {
+        cout<<"你想怎么查找同学呢?"<<endl
+            <<"俺想按照ID查找，点1"<<endl
+            <<"俺想按照姓名查找，点2"<<endl;
+        int select = 0;
+        cin>>select;
+        if (select == 1)
+        {
+            int id ;
+            cout<<"查找哪个同学呢?给俺一个ID呗"<<endl;
+            cin>>id;
+            int ret = IsExit(id);
+            if (ret != -1)
+            {
+                cout<<"找到这位同学啦"<<endl;
+                this->stuArray[ret]->ShowInfo();
+            }
+            else
+            {
+                cout<<"俺怎么找不到这个人qaq"<<endl;
+
+            }
+        }
+        else if (select == 2)
+        {
+            string name;
+            cout<<"查找哪个同学呢，给俺一个名字呗"<<endl;
+            cin>>name;
+            bool flag = false;
+
+            for (int i = 0; i < sumNum; ++i) {
+                if (this->stuArray[i]->name == name)
+                {
+                    cout<<"找到这个同学啦，这位同学编号是"
+                    <<this->stuArray[i]->id<<endl;
+                    cout<<"他的信息在这里呦"<<endl;
+
+                    flag = true;
+                    this->stuArray[i]->ShowInfo();
+                }
+            }
+            if (!flag)
+            {
+                cout<<"qaq俺怎么没有找到这个同学呢"<<endl;
+
+            }
+        }
+        else
+        {
+            cout<<"你想怎么查啦?"<<endl;
+        }
+    }
+    system("pause");
+    system("cls");
 }

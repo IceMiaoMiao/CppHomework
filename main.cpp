@@ -44,6 +44,7 @@ int main()
                 sm.ModStu();
                 break;
             case 5:
+                sm.FindStu();
                 break;
             case 6:
                 break;

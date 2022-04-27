@@ -30,6 +30,7 @@ public:
     void DelStu();
     int IsExit(int _id);
     void ModStu();
+    void FindStu();
 };
 
 
