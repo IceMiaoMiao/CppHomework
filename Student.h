@@ -12,7 +12,7 @@ class Student {
 public:
     virtual void ShowInfo() = 0;
     virtual string GetDepName() = 0;
-
+    //虚函数，不做实现，相信后来人的智慧
     int id;
     string name;
     int depId;

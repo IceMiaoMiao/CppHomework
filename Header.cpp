@@ -8,6 +8,7 @@ Header::Header(int _id, string _name, int _did)
     this->id = _id;
     this->name = _name;
     this->depId = _did;
+    //进行一个初始化
 }
 void Header::ShowInfo()
 {
@@ -19,4 +20,5 @@ void Header::ShowInfo()
 string Header::GetDepName()
 {
     return "俺是乐于帮助同学的班干部";
+    //和上面一样，你是干啥的
 }

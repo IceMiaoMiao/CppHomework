@@ -11,12 +11,14 @@ Common::Common(int _id,string _name,int _did)
 }
 void Common::ShowInfo()
 {
+    //字面意思，就不解释啦
     cout<<"俺的学号是："<<id
-    <<"\t名字是："<<name
-    <<"\t职务是："<<GetDepName()<<depId
-    <<"\t俺的任务是好好学习 "<<endl;
+    <<"\t 名字是："<<name
+    <<"\t 职务是："<<GetDepName()<<depId
+    <<"\t 俺的任务是好好学习 "<<endl;
 }
 string Common::GetDepName()
 {
     return "俺是平平无奇大学生";
+    //大声告诉别人，你是干嘛的
 }

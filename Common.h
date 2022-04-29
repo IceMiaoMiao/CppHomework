@@ -8,6 +8,7 @@
 
 class Common :public Student{
 public:
+    //对基类的纯虚函数进行一个重写
     Common(int _id,string _name,int _did);
     void ShowInfo();
     string GetDepName();

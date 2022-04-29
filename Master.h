@@ -9,6 +9,7 @@
 class Master :public Student{
 public:
     Master(int _id,string _name,int _did);
+    //进行一个初始化
     void ShowInfo();
     string GetDepName();
 };
