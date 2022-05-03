@@ -14,7 +14,7 @@ void Common::ShowInfo()
     //字面意思，就不解释啦
     cout<<"俺的学号是："<<id
     <<"\t 名字是："<<name
-    <<"\t 职务是："<<GetDepName()<<depId
+    <<"\t 职务是："<<GetDepName()
     <<"\t 俺的任务是好好学习 "<<endl;
 }
 string Common::GetDepName()

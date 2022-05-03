@@ -14,7 +14,7 @@ void Header::ShowInfo()
 {
     cout<<"俺的学号是："<<id
         <<"\t名字是："<<name
-        <<"\t职务是："<<GetDepName()<<depId
+        <<"\t职务是："<<GetDepName()
         <<"\t俺的任务是帮助同学们 "<<endl;
 }
 string Header::GetDepName()

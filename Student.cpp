@@ -3,3 +3,4 @@
 //
 
 #include "Student.h"
+//由于这是个纯虚类，所以cpp文件不写东西了

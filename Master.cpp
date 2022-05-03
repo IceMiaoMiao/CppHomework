@@ -14,8 +14,8 @@ void Master::ShowInfo()
     //字面意思，展示一下信息
     cout<<"俺的学号是："<<id
         <<"\t名字是："<<name
-        <<"\t职务是："<<GetDepName()<<depId
-        <<"\t 俺的任务是管理班级 "<<endl;
+        <<"\t职务是："<<GetDepName()
+        <<"\t  俺的任务是管理班级 "<<endl;
 
 }
 string Master::GetDepName()

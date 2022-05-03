@@ -440,7 +440,7 @@ void StudentManager::SortStu()
 
         }
         //很熟悉的排序操作
-        cout<<"俺排序完成啦"<<endl;
+        cout<<"俺排序完成啦！"<<endl;
         this->Save();
         this->ShowStu();
         //让排序完的学生们出来展示展示吧
